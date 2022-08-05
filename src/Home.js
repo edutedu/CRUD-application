@@ -14,7 +14,7 @@ function Home() {
   const navigate = useNavigate();
 
   const Login = () =>{
-    Axios.post("https://crud-app02.herokuapp.com/api/login",{
+    Axios.post("https://crud-app02.herokuapp.com/login",{
       username: usernameLogin,
       password: passwordLogin,
     })

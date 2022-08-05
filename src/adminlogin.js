@@ -21,7 +21,7 @@ function LoginAdmin(){
 
 
     useEffect(() => {
-        Axios.get("https://crud-app02.herokuapp.com/api/getusers")
+        Axios.get("https://crud-app02.herokuapp.com/getusers")
         .then(response => {
               setUserList(response.data);
         });
@@ -38,7 +38,7 @@ function LoginAdmin(){
         setAddStatus("The password must contain at least 10 characters");
       }
       else{
-        Axios.post("https://crud-app02.herokuapp.com/api/add", {
+        Axios.post("https://crud-app02.herokuapp.com/add", {
           username: usernameAdd, 
           password: passwordAdd,
         })
@@ -58,7 +58,7 @@ function LoginAdmin(){
   };
     
     const deleteUser = (id) =>{
-      Axios.delete(`https://crud-app02.herokuapp.com/api/delete/${id}`)
+      Axios.delete(`https://crud-app02.herokuapp.com/delete/${id}`)
       .then((response)=>{
         setUserList([...UserList].filter((val)=>{
           return val.id !== id;
@@ -71,7 +71,7 @@ function LoginAdmin(){
         setAddStatus("Please enter the username/password!");
       }
       else{
-      Axios.put("https://crud-app02.herokuapp.com/api/editusername", {
+      Axios.put("https://crud-app02.herokuapp.com/editusername", {
         username: newUsername,
         id: id,
       })
@@ -88,7 +88,7 @@ function LoginAdmin(){
         setAddStatus("The password must contain at least 10 characters");
       }
       else{
-      Axios.put("https://crud-app02.herokuapp.com/api/editpassword", {
+      Axios.put("https://crud-app02.herokuapp.com/editpassword", {
         password: newPassword,
         id: id,
       })
