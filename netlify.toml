@@ -4,5 +4,5 @@
   status = 200
 [[redirects]]
   from = '/logintest'
-  to = 'https://crud-app02.herokuapp.com/ceva'
+  to = 'https://crud-app02.herokuapp.com/login'
   status = 200
