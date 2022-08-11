@@ -1,8 +1,0 @@
-[[redirects]]
-  from = '/*'
-  to = 'index.html'
-  status = 200
-[[redirects]]
-  from = '/logintest'
-  to = 'https://crud-app02.herokuapp.com/login'
-  status = 200
