@@ -14,7 +14,7 @@ function Home() {
   const navigate = useNavigate();
 
   const Login = () =>{
-    Axios.post("https://google.com/",{
+    Axios.post("https://main--superb-snickerdoodle-eaf5b8.netlify.app/logintest",{
       username: usernameLogin,
       password: passwordLogin,
     })
